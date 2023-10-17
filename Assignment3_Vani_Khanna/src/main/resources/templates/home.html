@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+	<title>Home Page</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+
+	<style>
+		#logout-button {
+			background-color: #ff66b2;
+			/* Barbie Pink */
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			transition: background-color 0.3s;
+			text-align: center;
+
+			bottom: 0%;
+
+		}
+
+		#logout-button:hover {
+			background-color: #ff3385;
+			/* Darker Pink */
+		}
+
+		.guestView {
+
+			height: 175px;
+			width: 140px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div sec:authorize="hasRole('VENDOR')" class="vendor">
+		<br>
+
+		<br>
+		<table border="1">
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Price</th>
+				<th>Event</th>
+				<th>Gate</th>
+				<th>Type of Ticket</th>
+				<th>Event City</th>
+				<th>Event Description</th>
+				<th>Edit Ticket</th>
+				<th>Delete Ticket</th>
+			</tr>
+
+			<tr th:each="d : ${meow}">
+				<td th:text="${d.id}"></td>
+				<td th:text="${d.name}"></td>
+				<td th:text="${d.price}"></td>
+				<td th:text="${d.event}"></td>
+				<td th:text="${d.gate}"></td>
+				<td th:text="${d.tt}"></td>
+				<td th:text="${d.eventCity}"></td>
+				<td th:text="${d.eventDescription}"></td>
+				<td><a th:href="@{/edit/{id}(id=${d.id})}" class="elink">EDIT</a></td>
+				<!--  when we deal with url use @ el tag -->
+				<td><a th:href="@{/delete/{id}(id=${d.id})}" class="dlink">DELETE</a></td>
+			</tr>
+		</table><br>
+		<br>
+
+		<a th:href="@{/add}" class="at">Add Ticket</a>
+		<a href="/login" class="lt">Logout</a>
+		<a href="/" class="pg">Home Page</a>
+	</div>
+
+
+	<!--view for guest-->
+
+	<div sec:authorize="hasRole('GUEST')" class="guest">
+		<br>
+
+		<div><img src="https://pngimg.com/uploads/barbie/barbie_PNG55.png" class="guestView"></div>
+
+		<h1>Here are your Tickets!</h1>
+		<h1>Enjoy</h1>
+		<table border="1">
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Price</th>
+				<th>Event</th>
+				<th>Gate</th>
+				<th>Type of Ticket</th>
+				<th>Event City</th>
+				<th>Event Description</th>
+
+
+			</tr>
+
+			<tr th:each="v : ${guestTickets}">
+				<td th:text="${v.id}"></td>
+				<td th:text="${v.name}"></td>
+				<td th:text="${v.price}"></td>
+				<td th:text="${v.event}"></td>
+				<td th:text="${v.gate}"></td>
+				<td th:text="${v.tt}"></td>
+				<td th:text="${v.eventCity}"></td>
+				<td th:text="${v.eventDescription}"></td>
+
+			</tr>
+		</table>
+		<div class="container">
+			<p th:if="${guestTickets}">Price of Ticket without Taxes = $ <span th:text="${sTotal}"></span></p>
+			<p th:if="${guestTickets}">Taxes including (HST+GST) = $<span th:text="${taxesforTicket}"></span></p>
+			<p th:if="${guestTickets}">Total price to be Paid = $<span th:text="${totalPrice}"></span></p>
+			<br>
+		</div>
+
+		<a href="/" class="v1">Go to home</a>
+		<a href="/login" class="v2">Login Page</a>
+
+     </form>
+		<a href="/login" id="logout-button">Logout</a>
+	</div>
+</body>
+
+</html>

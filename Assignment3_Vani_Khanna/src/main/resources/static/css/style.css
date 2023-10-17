@@ -1,0 +1,657 @@
+/*body {
+
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 20px;
+	background-image: url('https://www.thesun.co.uk/wp-content/uploads/2022/05/LM_barbiedreamhouse_comp.jpg?w=620');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}*/
+
+#login {
+	background-color: #f6d5e5;
+	font-family: 'Arial', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	margin: 0;
+	background-image: url('https://thedrum-media.imgix.net/thedrum-prod/s3/news/tmp/103031/original.jpg?w=608&ar=default&fit=crop&crop=faces,edges&auto=format');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	margin: 0;
+	position: relative;
+
+
+}
+
+
+
+.login-container {
+	background-color: #ffffff;
+	padding: 40px;
+	border-radius: 10px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	text-align: center;
+}
+
+.log {
+	color: #ff69b4;
+	margin-bottom: 20px;
+}
+
+.l {
+	width: 100%;
+	padding: 10px;
+	margin: 8px 0;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	outline: none;
+	font-size: 13px;
+}
+
+.g {
+	background-color: #ff69b4;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	/*transition: background-color 0.3s ease;*/
+}
+
+.g:hover {
+	background-color: #ff1493;
+}
+
+.in {
+	color: #ff69b4;
+	text-decoration: none;
+}
+
+.in:hover {
+	text-decoration: underline;
+}
+
+#register {
+	background-color: #f9e0ea;
+	font-family: 'Arial', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	margin: 0;
+	background-image: url('https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/fe4a15fd134ce1a073262c1c4eccaa82.jpg')
+}
+
+#register::before {
+	/* Add this pseudo-element */
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/fe4a15fd134ce1a073262c1c4eccaa82.jpg');
+	filter: blur(8.5px);
+	/* Adjust the blur amount as needed */
+	z-index: -1;
+	/* Place the pseudo-element below the content */
+}
+
+#register h1 {
+	color: black;
+	font-size: 2rem;
+	margin-bottom: 20px;
+}
+
+#register form {
+
+	background-color: #fff;
+	padding: 45px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	width: 300px;
+}
+
+#register label {
+	font-size: 1.1rem;
+	color: #e60073;
+	display: block;
+	margin-bottom: 5px;
+}
+
+#register input[type="text"],
+input[type="password"] {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 15px;
+	border: 1px solid #e60073;
+	border-radius: 5px;
+	font-size: 1rem;
+}
+
+#register input[type="submit"] {
+	background-color: #e60073;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 1rem;
+}
+
+#register a {
+	color: #e60073;
+	text-decoration: none;
+	font-size: 1rem;
+	margin-top: 10px;
+}
+
+#add {
+	background-color: #ffccff;
+	/* Light Pink */
+	font-family: "Arial", sans-serif;
+
+}
+
+#add form {
+	background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+#add h1 {
+	 color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#add a {
+	display: inline-block;
+    background-color: #ff66b2;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+    width: 90%;
+}
+
+#add label {
+	 font-size: 16px;
+    color: #ff66b2;
+    margin-top: 10px;
+    display: block;
+}
+
+#add input[type="submit"] {
+	background-color: #ff66b2;
+	color: #ffffff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	margin-top: 10px;
+	text-decoration: none;
+}
+
+#add input[type="text"],
+input[type="number"],
+input[type="date"] {
+	padding: 8px;
+	border: 1px solid #ff66b2;
+	border-radius: 5px;
+	font-size: 14px;
+	margin-top: 5px;
+}
+
+#add input[type="radio"] {
+	margin-right: 5px;
+	transform: scale(1.2);
+}
+
+#add 
+ a:hover {
+	background-color: #ff3385;
+	
+}
+
+input[type="submit"]:hover,
+
+#add input[type="submit"]
+{
+	background-color: #ff66b2;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    text-decoration: none;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+.adding .b1
+{
+	position: fixed;
+    bottom: 0;
+    left: 12%;
+    width: 15%; /* Adjust the width of the image as needed */
+    z-index: -1; /* Place the image behind other content */
+    height: 44%;
+}
+.adding .b2
+{
+	position: fixed;
+    bottom: 0;
+    right: 12%;
+    width: 15%; /* Adjust the width of the image as needed */
+    z-index: -1; /* Place the image behind other content */
+    height: 40%;
+    
+}
+.adding .b3
+{
+	
+    position: fixed;
+    top: 7%; /* Change 'bottom' to 'top' */
+    left: 12%; /* Change 'left' value */
+    width: 20%; /* Adjust the width of the image as needed */
+    z-index: -1;
+}
+
+.adding .b4
+{
+
+    position: fixed;
+    top: 8%;
+    right: 7%; /* Set 'right' to position the image at the top right corner */
+    width: 20%; /* Adjust the width of the image as needed */
+    z-index: -1;
+    height: 40%;
+}
+
+.edit h1 {
+	 color: rgb(255, 255, 255);
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.edit form
+{
+	background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+.edit a
+{
+	display: inline-block;
+    background-color: #ff66b2;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+    width: 90%;
+}
+.edit  input[type="submit"]
+{
+	background-color: #ff66b2;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    text-decoration: none;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.edit input[type="text"],
+input[type="number"],
+input[type="date"] {
+	padding: 8px;
+	border: 1px solid #ff66b2;
+	border-radius: 5px;
+	font-size: 14px;
+	margin-top: 5px;
+}
+
+.edit label
+{
+	 font-size: 16px;
+    color: #ff66b2;
+    margin-top: 10px;
+    display: block;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
+
+.edit {
+    background-image: url('https://media.nbcsandiego.com/2023/04/world-of-barbie-thumbnail.png');
+  background-size:cover;
+        -webkit-animation: slidein 25s;
+        animation: slidein 25s;
+
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;              
+}
+/*.edit {
+    background: white;
+    background-image: linear-gradient(90deg, rgb(255, 128, 128) 50%, transparent 0),
+                      linear-gradient(rgb(255, 128, 128) 50%, transparent 0);
+    background-size: 30px 30px;
+}*/
+
+@-webkit-keyframes slidein {
+from {background-position: top; background-size:3000px; }
+to {background-position: -100px 0px;background-size:2750px;}
+}
+
+@keyframes slidein {
+from {background-position: top;background-size:3000px; }
+to {background-position: -100px 0px;background-size:2750px;}
+
+}
+
+
+@keyframes color {
+  0%   { background: rgb(255, 128, 192); }
+  20%  { background: rgb(128, 255, 255); }
+  40%  { background: rgb(192, 192, 192); }
+  60%  { background: rgb(255, 128, 128); }
+  80%  { background: rgb(0, 0, 0); }
+  100% { background: rgb(255, 0, 128); }
+}
+
+.guest {
+  background: #33CCCC; /* Fallback */
+  animation: color 9s infinite linear;
+  text-align: center;
+  padding: 2em;
+  height: 723px;
+}
+
+/*.guest
+{
+	 background-color: #f6c7e2;
+    font-family: Arial, sans-serif;
+    height: 723px;
+}*/
+.guest table
+{
+	border-collapse: collapse;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 3px solid #e63f8b;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.guest th,td
+{
+	background-color: #f9a8c5;
+    color: #fff;
+    font-size: 18px;
+}
+.guest tr:nth-child(even){
+	 background-color: #fbd2e6;
+}
+.guest  tr:nth-child(odd)
+{
+	background-color: #f5a3cc;
+}
+.guest h1
+  {
+    text-align: center;
+    color: rgb(255, 255, 255);
+  }
+/*  .guest
+  {
+	  background-color: #f6c7e2;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }*/
+  
+  .container {
+    background-color: #fff;
+    border: 3px solid #e63f8b;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 50px auto;
+    max-width: 600px;
+    border-radius: 10px;
+    text-align: center;
+  }
+.container  h1 {
+    color: #e63f8b;
+  }
+
+  .container p {
+    margin: 10px 0;
+  }
+
+  .guest a 
+  {
+	  display: inline-block;
+    padding: 10px 20px;
+    background-color: #e63f8b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 10px;
+    cursor: pointer;
+  
+   text-align: center;
+  }
+   .guest a:hover {
+    background-color: #c23276;
+  }
+  /*.guest .v1
+  {
+	 margin-left: 470px;
+  }
+  .guest .v2
+  {
+	margin-left: 400px;  
+	
+  }*/
+  	/*.logout  {
+			background-color: #ff66b2;  Barbie Pink 
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}*/
+		/*.logout input[type="submit"]:hover {
+			background-color: #ff3385;
+			}*/
+  /* .logout
+   {
+	   color: black;
+   }
+   */
+   
+  /* #logout-button {
+    background: none;
+    border: none;
+    color: #ff66b2;  Barbie Pink 
+    font-size: 16px;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+#logout-button:hover {
+    color: #ff3385;  Darker Pink 
+}*/
+
+.vendor table
+{
+	border-collapse: collapse;
+    width: 100%;
+    max-width:1000px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 3px solid #e63f8b;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-top: 80px;
+    
+}
+.vendor th,td
+{
+	background-color: rgb(255, 255, 255);
+    color: #e63f8b;
+    font-size: 18px;
+    padding: 6px;
+}
+.vendor tr:nth-child(even){
+	 background-color: #fbd2e6;
+}
+.vendor  tr:nth-child(odd)
+{
+	background-color: #f5a3cc;
+}
+.vendor h1
+  {
+    text-align: center;
+    color: rgb(255, 255, 255);
+  }
+  .elink
+  {
+	  text-decoration:none;
+	  background-color:white;
+    color: #e63f8b;
+    font-size: 18px;
+  }
+  .dlink
+  {
+	  text-decoration:none;
+	   background-color: white;
+    color: #e63f8b;
+    font-size: 18px;
+  }
+    .elink:hover
+    {
+		color: black;
+		transition: 0.3s;
+	}
+	.dlink:hover
+	{
+		color: black;
+	}
+    .at {
+        background-color:black;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s, color 0.3s;
+        margin-left: 270px;
+    }
+
+     .pg {
+        background-color:black;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s, color 0.3s;
+        margin-left: 30px;
+        }
+    .at:hover {
+        background-color: lightblue;
+        color: black;
+    }
+      .pg:hover {
+        background-color: lightblue;
+        color: black;
+    } 
+
+    .lt {
+        background-color:black;
+        color: rgb(255, 255, 255);
+        padding: 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s, color 0.3s;
+        margin-left:30px;
+    }
+
+    .lt:hover {
+        background-color: lightblue;
+        color: black;
+        
+    }
+    
+ 	
+  #logout-button {
+        background-color: #ff66b2; /* Barbie Pink */
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+       transition: background-color 0.3s;
+       text-align: center;
+    
+       bottom: 0%;
+        
+    }
+
+    #logout-button:hover {
+        background-color: #ff3385; /* Darker Pink */
+    }
+    .guestView
+    {
+		
+		height: 205px;
+		width: 140px;
+	}
+    .vendor
+    {
+		background-image: url('https://media.houseandgarden.co.uk/photos/647f0066726bb931873b5523/16:9/w_2560%2Cc_limit/AD0623_BARBIE_2%2520copy.jpg');
+		background-repeat: none;
+		height: 723px;
+	}

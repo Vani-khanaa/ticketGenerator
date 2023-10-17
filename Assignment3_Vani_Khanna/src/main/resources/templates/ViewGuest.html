@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+ xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<head>
+	<title>Home Page</title>
+	<link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+
+<body>
+
+<div sec:authorize="isAuthenticated()"> 
+     <br>
+     <form method="post" th:action="@{/logout}"> <!-- we do th:action to make sure it gives csrf tag -->
+       <input type="submit" value="Logout">
+     </form>
+     <!--  get takes us to logout page but post actually logs out -->
+  </div>
+	
+	<br>
+	<table border="1">
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Price</th>
+			<th>Event</th>
+			<th>Gate</th>
+			<th>Type of Ticket</th>
+			<th>Event Date</th>
+			<th>Event Description</th>
+			<th colspan="2">Options</th>
+
+		</tr>
+
+		<tr th:each="v : ${me}">
+			<td th:text="${v.id}"></td>
+			<td th:text="${v.name}"></td>
+			<td th:text="${v.price}"></td>
+			<td th:text="${v.event}"></td>
+			<td th:text="${v.gate}"></td>
+			<td th:text="${v.tt}"></td>
+			<td th:text="${v.eventDate}"></td>
+			<td th:text="${v.eventDescription}"></td>
+	
+		</tr>
+	</table><br>
+   <br>
+   <a th:href="/" style="color:white;background-color:black;padding:8px">Home Page</a>
+   
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+	<title>Add Page</title>
+<link rel="stylesheet" type="text/css" href="/css/style.css">	
+</head>
+
+<body id="add">
+	<h1>Add Ticket for the Show !!</h1>
+	<div class="adding">
+	<img src="https://i.pinimg.com/originals/af/f9/1a/aff91a889ca0e9c532c0c795052938e4.png" class="b1">
+	 
+	<img src="https://pngimg.com/uploads/barbie/small/barbie_PNG43.png" class="b2">	
+	<img src="https://i.pinimg.com/originals/33/4f/3c/334f3cd2241ffd0f83a56be3db614db9.png" class="b3">
+	<img src="https://pngimg.com/uploads/barbie/barbie_PNG24.png" class="b4">	
+	<form th:action="@{/add}" method="post" th:object="${ticket}" >
+		
+		<label for="assignedUser">Ticket for :</label><br>
+    <select name="assignedUser"  th:field="*{name}">
+        <!-- Iterate over the list of registered users and generate the options -->
+        <option th:each="user : ${users}" th:value="${user.userName}" th:text="${user.userName}"></option><br>
+    </select><br>
+    
+	
+	<input type="hidden" th:field="*{id}" ><br>
+	
+	<label>	Price:</label><br> <input type="number" th:field="*{price}"  step="0.01"><br><br>
+	<label>	Event:</label> <br><input type="text" th:field="*{event}" ><br><br>
+
+	<label>Gate Number:</label><br>
+   <input type="number" th:field="*{gate}"><br><br>
+
+	<label>	Type of Ticket: </label><br>
+		<input type="radio" th:field="*{tt}" th:value="V.I.P" >VIP
+		<input type="radio" th:field="*{tt}" th:value="Normal" >Normal<br><br>
+
+	<label>	City of event: </label> <br><input type="text" th:field="*{eventCity}" ><br><br>
+
+	<label for="description">Event Description: </label><br><input type="text" th:field="*{eventDescription}" ><br>
+
+		<br><input type="submit" value="Add Ticket" >  <br><br>
+		<a href="/">Go Home</a>
+	</form><br>
+	</div>
+</body>
+
+</html>
